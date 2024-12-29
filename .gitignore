@@ -1,0 +1,91 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/* UserPage.css */
+.user-page {
+    padding: 30px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 36px;
+    color: #388e3c;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-section {
+    margin-top: 40px;
+  }
+  
+  .calendar-section h2 {
+    font-size: 24px;
+    color: #388e3c;
+    margin-bottom: 20px;
+  }
+  
+
+  // src/pages/UserPage.js
+import React, { useState } from 'react';
+import Dashboard from '../components/Dashboard';
+import CalendarView from '../components/CalendarView';
+import './UserPage.css';  // Import the CSS for styling
+
+function UserPage() {
+  const [companies, setCompanies] = useState([
+    {
+      companyName: 'Tech Innovations',
+      comments: 'Last communication: LinkedIn Message on 15th Dec.',
+      communicationPeriodicity: '2 weeks',
+    },
+    {
+      companyName: 'Creative Solutions',
+      comments: 'Last communication: Email on 10th Dec.',
+      communicationPeriodicity: '1 week',
+    },
+    {
+      companyName: 'Business Partners',
+      comments: 'Last communication: Phone Call on 5th Dec.',
+      communicationPeriodicity: '3 weeks',
+    },
+  ]);
+
+  return (
+    <div className="user-page">
+      <h1 className="page-title">User Dashboard</h1>
+
+      <Dashboard companies={companies} />
+
+      <div className="calendar-section">
+        <h2>Communication Calendar</h2>
+        <CalendarView />
+      </div>
+    </div>
+  );
+}
+
+export default UserPage;

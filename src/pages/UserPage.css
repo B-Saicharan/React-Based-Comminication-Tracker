@@ -1,0 +1,27 @@
+/* UserPage.css */
+.user-page {
+    padding: 30px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 36px;
+    color: #388e3c;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-section {
+    margin-top: 40px;
+  }
+  
+  .calendar-section h2 {
+    font-size: 24px;
+    color: #388e3c;
+    margin-bottom: 20px;
+  }
+  
